@@ -3,98 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coastal Escape</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-color: #f0f8ff; /* Very light water blue */
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f1ea; /* Soft Sand */
+            color: #2c3e50;
         }
 
-        /* --- Header Styles --- */
-        header {
-            background: linear-gradient(to right, #0077be, #00a8cc); /* Ocean Gradient */
-            color: white;
-            padding: 1.5rem 2rem;
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            justify-content: center;
+            text-align: center;
+            color: white;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 1.5rem;
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
             letter-spacing: 2px;
             text-transform: uppercase;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 500;
-            transition: color 0.3s;
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: -50px auto 50px auto;
+            background: white;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
         }
 
-        nav a:hover {
-            color: #ffda79; /* Sunny Yellow */
-        }
-
-        /* --- Main Content Spacer --- */
-        main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #2c3e50;
-        }
-
-        /* --- Footer Styles --- */
-        footer {
-            background-color: #ede0d4; /* Sandy Beige */
-            color: #5d4037;
-            padding: 2rem;
+        .section-title {
             text-align: center;
-            border-top: 5px solid #00a8cc; /* Wave line */
+            font-family: 'Playfair Display', serif;
+            color: #0077be; /* Ocean Blue */
+            font-size: 2.5rem;
+            margin-bottom: 40px;
         }
 
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
         }
 
-        .shells {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+        .card {
+            background: #e0f2f1; /* Seafoam Mist */
+            padding: 25px;
+            border-radius: 12px;
+            border-bottom: 4px solid #0077be;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #005f73;
+            margin-top: 0;
+        }
+
+        .card p {
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .accent-line {
+            width: 50px;
+            height: 3px;
+            background: #d4a373; /* Driftwood/Tan */
+            margin: 20px auto;
+        }
+
+        @media (max-width: 768px) {
+            .container { margin: 20px; padding: 30px; }
+            .hero-content h1 { font-size: 2.5rem; }
         }
     </style>
-    <title>Beach Theme Layout</title>
 </head>
 <body>
 
-    <header>
-        <h1>🐚 SEA BREEZE</h1>
-        <nav>
-            <a href="#">The Coast</a>
-            <a href="#">Tide Times</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
-
-    <main>
-        <p>Your sun-soaked content goes here.</p>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="shells">🏖️ 🌊 ☀️</div>
-            <p>&copy; 2026 Sea Breeze Resorts. All rights reserved.</p>
-            <p><small>Handcrafted by the shore.</small></p>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Salt in the Air</h1>
+            <p>Experience the Tides</p>
         </div>
-    </footer>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">The Shoreline Journal</h2>
+        <div class="accent-line"></div>
+        
+        <p style="text-align: center; font-style: italic; margin-bottom: 40px;">
+            "Every grain of sand is a story told by the ocean."
+        </p>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Morning Tide</h3>
+                <p>The best time to collect seashells and watch the horizon turn from deep indigo to soft coral pink.</p>
+            </div>
+            <div class="card">
+                <h3>Coastal Flora</h3>
+                <p>Explore the resilient beauty of sea oats and dunes that protect our delicate shoreline ecosystems.</p>
+            </div>
+            <div class="card">
+                <h3>Ocean Depth</h3>
+                <p>Beneath the turquoise surface lies a world of vibrant reefs and silent, majestic wonders.</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
