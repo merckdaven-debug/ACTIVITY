@@ -3,9 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f8ff; /* Very light water blue */
+        }
+
+        /* --- Header Styles --- */
+        header {
+            background: linear-gradient(to right, #0077be, #00a8cc); /* Ocean Gradient */
+            color: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffda79; /* Sunny Yellow */
+        }
+
+        /* --- Main Content Spacer --- */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2c3e50;
+        }
+
+        /* --- Footer Styles --- */
+        footer {
+            background-color: #ede0d4; /* Sandy Beige */
+            color: #5d4037;
+            padding: 2rem;
+            text-align: center;
+            border-top: 5px solid #00a8cc; /* Wave line */
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .shells {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+    </style>
+    <title>Beach Theme Layout</title>
 </head>
 <body>
-    
+
+    <header>
+        <h1>🐚 SEA BREEZE</h1>
+        <nav>
+            <a href="#">The Coast</a>
+            <a href="#">Tide Times</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <p>Your sun-soaked content goes here.</p>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="shells">🏖️ 🌊 ☀️</div>
+            <p>&copy; 2026 Sea Breeze Resorts. All rights reserved.</p>
+            <p><small>Handcrafted by the shore.</small></p>
+        </div>
+    </footer>
+
 </body>
 </html>
